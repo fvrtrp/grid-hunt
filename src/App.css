@@ -47,7 +47,10 @@
 }
 
 .App input::placeholder {
-  color: #FFBF00;
+  color: #FFBF0066;
 }
 
+.winPrompt {
+  line-height: 3;
+}
 

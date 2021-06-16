@@ -6,6 +6,7 @@ export default function Hunt(props) {
 
     const [ userInput, setUserInput] = useState("")
     const [currentQuestion, setQuestion] = useState(null)
+    const [completed, setCompleted] = useState(false)
 
     useEffect(() => {
         const nextQuestion = questions.find(i=>i.key === 0)
@@ -39,12 +40,31 @@ export default function Hunt(props) {
     if(!currentQuestion)
     return null;
 
+    if(completed) {
+        return (
+            <div className="container">
+                <h1 className="header">You have<br/>finished.</h1>
+                <div className="winPrompt">
+                    SHARE THIS SCREEN ON SLACK<br/>TO MARK COMPLETION.<br/>CONGRATS!
+                </div>
+            </div>
+        )
+    }
+
     return (
         <div className="container">
-            <h1 className="header">hunt 2021</h1>
-            <h3 className="prompt">
-            {currentQuestion.title}
+            <h1 className="header">
+                hunt 2021
+            </h1>
+            <h3 className="prompt" aria-label="iamapuzzle">
+                {currentQuestion.title}
             </h3>
+            {
+                currentQuestion.body &&
+                <h5 className="promptBody">
+                    {currentQuestion.body}
+                </h5>
+            }
             <form onSubmit={checkPassword}>
                 <input
                     placeholder={"TYPE HERE"}
