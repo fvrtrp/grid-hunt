@@ -22,12 +22,21 @@
   letter-spacing: 3.95px;
   color: #FFBF00;
   margin: 50px;
+  margin-top: 0;
 }
 
 .App .prompt {
   font-size: 16px;
   text-transform: uppercase;
   font-weight: 300;
+  max-width: 70%;
+  min-height: 100px;
+  margin: auto;
+}
+.promptBody {
+  letter-spacing: 0;
+  margin: -30px auto 50px;
+  max-width: 70%;
 }
 
 .App input {
@@ -40,7 +49,8 @@
   letter-spacing: 11.43px;
   min-width: 400px;
   text-transform: uppercase;
-  margin: 100px 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 .App input:focus {
   outline: none;
@@ -54,3 +64,19 @@
   line-height: 3;
 }
 
+@media (max-width: 650px) {
+  .App {
+    font-size: 12px;
+  }
+  .App .header {
+    font-size: 75px;
+    margin: 0 10px 50px;
+  }
+  .App .prompt {
+    font-size: 13px;
+  }
+  .App input {
+    min-width: unset;
+    width: 90%;
+  }
+}

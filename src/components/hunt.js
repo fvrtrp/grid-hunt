@@ -18,22 +18,24 @@ export default function Hunt(props) {
         const key = currentQuestion.solution;
         let hash = sha256.create().update(userInput.toLowerCase()).hex();
         const isCorrect = hash===key;
-        console.log(isCorrect);
+        console.log(`wrong answer, fool`)
         if(isCorrect) {
             const nextHash = sha256.create().update(hash).hex();
+
+            //end condition - player has finished the last question
+            if(nextHash === "bc13c5350e031e981f81b5a4f565279e3ca19408a7e3fd4e62d11b296f7857a3") {
+                setCompleted(true)
+            }
+
             const nextQuestion = questions.find(i=>i.key === nextHash);
-            console.log(nextHash, nextQuestion);
             if(!nextQuestion) {
                 //throw error
-                console.log(`couldn't find next question`);
+                console.log(`couldn't find next question, please contact admin`);
             }
             else {
                 setQuestion(nextQuestion);
                 setUserInput('');
             }
-        }
-        else {
-            //prompt to try again
         }
     }
 
