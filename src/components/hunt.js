@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import sha256 from 'js-sha256'
-import { questions } from './questions'
+import { questions, finalHash } from './questions'
 
 export default function Hunt(props) {
 
@@ -23,14 +23,15 @@ export default function Hunt(props) {
             const nextHash = sha256.create().update(hash).hex();
 
             //end condition - player has finished the last question
-            if(nextHash === "bc13c5350e031e981f81b5a4f565279e3ca19408a7e3fd4e62d11b296f7857a3") {
+            if(nextHash === finalHash) {
                 setCompleted(true)
+                return
             }
 
             const nextQuestion = questions.find(i=>i.key === nextHash);
             if(!nextQuestion) {
                 //throw error
-                console.log(`couldn't find next question, please contact admin`);
+                alert(`couldn't find next question, please contact admin`);
             }
             else {
                 setQuestion(nextQuestion);
