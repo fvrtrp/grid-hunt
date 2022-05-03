@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@900&family=Source+Code+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=montserrat:wght@900&family=Source+Code+Pro&display=swap');
 
 .App {
   text-align: center;
@@ -8,19 +8,17 @@
   height: 100%;
   width: 100%;
   font: 300 16px 'Source Code Pro', sans-serif;
-  letter-spacing: 11.43px;
-  background: black;
-  color: white;
+  letter-spacing: 5px;
+  color: black;
   background: url('./bg.svg');
   background-repeat: no-repeat;
-  background-color: black;
   background-size: cover;
 }
 
 .App .header {
-  font: 900 150px 'Playfair Display', sans-serif;
+  font: 900 150px 'Montserrat', sans-serif;
   letter-spacing: 3.95px;
-  color: #FFBF00;
+  color: #0024E1;
   margin: 50px;
   margin-top: 0;
 }
@@ -41,9 +39,9 @@
 
 .App input {
   padding: 25px 35px;
-  color: #FFBF00;
-  background: rgba(0,0,0,0.3);
-  border: solid 1px #FFBF00;
+  color: black;
+  background: rgba(0,0,0,0.1);
+  border: solid 0px #0024E1;
   border-radius: 10px;
   text-align: center;
   letter-spacing: 11.43px;
@@ -57,7 +55,7 @@
 }
 
 .App input::placeholder {
-  color: #FFBF0066;
+  color: black;
 }
 
 .winPrompt {
