@@ -57,7 +57,7 @@ export default function Hunt(props) {
     return (
         <div className="container">
             <h1 className="header">
-                hunt 2021
+                hunt 2022
             </h1>
             <h3 className="prompt" aria-label="iamapuzzle">
                 {currentQuestion.title}
