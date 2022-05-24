@@ -9,6 +9,8 @@ export default function Hunt(props) {
     const [completed, setCompleted] = useState(false)
     const [startTime, setStartTime] = useState(new Date().getTime())
     const [totalTime, setTotalTime] = useState('')
+    const [skipped, setSkipped] = useState(0)
+    const [answered, setAnswered] = useState(0)
 
     useEffect(() => {
         const nextQuestion = questions.find(i=>i.key === 0)
@@ -22,6 +24,7 @@ export default function Hunt(props) {
         const isCorrect = hash===key;
         console.log(`wrong answer, fool`)
         if(isCorrect) {
+            setAnswered(i=>(i+1))
             const nextHash = sha256.create().update(hash).hex();
 
             //end condition - player has finished the last question
@@ -45,7 +48,18 @@ export default function Hunt(props) {
     }
 
     const skipQuestion = () => {
-
+        setSkipped(i => (i+1))
+        const targetQuestion = questions.find(i=>i.title === currentQuestion.title)
+        const targetHash = sha256.create().update(targetQuestion.solution).hex()
+        if(targetHash === finalHash) {
+            const currentTime = new Date().getTime()
+            setTotalTime((currentTime - startTime)/1000)
+            setCompleted(true)
+            return
+        }
+        const nextQuestion = questions.find(i=>i.key === targetHash)
+        setQuestion(nextQuestion)
+        setUserInput('')
     }
 
     if(!currentQuestion)
@@ -55,7 +69,8 @@ export default function Hunt(props) {
         return (
             <div className="container">
                 <h1 className="header">You have<br/>finished.</h1>
-                You took {totalTime} seconds to complete.
+                You took <b>{totalTime}</b> seconds to complete.<br/>
+                You solved <b>{answered}</b> puzzles, and skipped <b>{skipped}</b> puzzles.
                 <div className="winPrompt">
                     TAKE A SCREENSHOT OF THE PAGE<br/>TO MARK COMPLETION.<br/>CONGRATS!
                 </div>
@@ -85,7 +100,7 @@ export default function Hunt(props) {
                     autoFocus
                 />
             </form>
-            {/* <div onClick={skipQuestion} className="skipButton">SKIP</div> */}
+            <div onClick={skipQuestion} className="skipButton">SKIP</div>
         </div>
     )
 }

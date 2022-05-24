@@ -57,6 +57,10 @@
 .App input::placeholder {
   color: black;
 }
+.App .skipButton {
+  margin-top: 25px;
+  cursor: pointer;
+}
 
 .winPrompt {
   line-height: 3;
