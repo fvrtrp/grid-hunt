@@ -7,6 +7,8 @@ export default function Hunt(props) {
     const [ userInput, setUserInput] = useState("")
     const [currentQuestion, setQuestion] = useState(null)
     const [completed, setCompleted] = useState(false)
+    const [startTime, setStartTime] = useState(new Date().getTime())
+    const [totalTime, setTotalTime] = useState('')
 
     useEffect(() => {
         const nextQuestion = questions.find(i=>i.key === 0)
@@ -24,6 +26,8 @@ export default function Hunt(props) {
 
             //end condition - player has finished the last question
             if(nextHash === finalHash) {
+                const currentTime = new Date().getTime()
+                setTotalTime((currentTime - startTime)/1000)
                 setCompleted(true)
                 return
             }
@@ -40,6 +44,10 @@ export default function Hunt(props) {
         }
     }
 
+    const skipQuestion = () => {
+
+    }
+
     if(!currentQuestion)
     return null;
 
@@ -47,8 +55,9 @@ export default function Hunt(props) {
         return (
             <div className="container">
                 <h1 className="header">You have<br/>finished.</h1>
+                You took {totalTime} seconds to complete.
                 <div className="winPrompt">
-                    SHARE THIS SCREEN ON SLACK<br/>TO MARK COMPLETION.<br/>CONGRATS!
+                    TAKE A SCREENSHOT OF THE PAGE<br/>TO MARK COMPLETION.<br/>CONGRATS!
                 </div>
             </div>
         )
@@ -57,7 +66,7 @@ export default function Hunt(props) {
     return (
         <div className="container">
             <h1 className="header">
-                hunt 2021
+                grid hunt
             </h1>
             <h3 className="prompt" aria-label="iamapuzzle">
                 {currentQuestion.title}
@@ -76,6 +85,7 @@ export default function Hunt(props) {
                     autoFocus
                 />
             </form>
+            {/* <div onClick={skipQuestion} className="skipButton">SKIP</div> */}
         </div>
     )
 }
