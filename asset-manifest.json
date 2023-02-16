@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/grid-hunt-2023/static/css/main.c6d4ffbc.chunk.css",
-    "main.js": "/grid-hunt-2023/static/js/main.6b8fdf21.chunk.js",
-    "main.js.map": "/grid-hunt-2023/static/js/main.6b8fdf21.chunk.js.map",
-    "runtime-main.js": "/grid-hunt-2023/static/js/runtime-main.6eab960e.js",
-    "runtime-main.js.map": "/grid-hunt-2023/static/js/runtime-main.6eab960e.js.map",
-    "static/js/2.392d389f.chunk.js": "/grid-hunt-2023/static/js/2.392d389f.chunk.js",
-    "static/js/2.392d389f.chunk.js.map": "/grid-hunt-2023/static/js/2.392d389f.chunk.js.map",
-    "static/js/3.067bec68.chunk.js": "/grid-hunt-2023/static/js/3.067bec68.chunk.js",
-    "static/js/3.067bec68.chunk.js.map": "/grid-hunt-2023/static/js/3.067bec68.chunk.js.map",
-    "index.html": "/grid-hunt-2023/index.html",
-    "static/css/main.c6d4ffbc.chunk.css.map": "/grid-hunt-2023/static/css/main.c6d4ffbc.chunk.css.map",
-    "static/js/2.392d389f.chunk.js.LICENSE.txt": "/grid-hunt-2023/static/js/2.392d389f.chunk.js.LICENSE.txt"
+    "main.css": "/grid-hunt/static/css/main.c6d4ffbc.chunk.css",
+    "main.js": "/grid-hunt/static/js/main.6b8fdf21.chunk.js",
+    "main.js.map": "/grid-hunt/static/js/main.6b8fdf21.chunk.js.map",
+    "runtime-main.js": "/grid-hunt/static/js/runtime-main.c449bc92.js",
+    "runtime-main.js.map": "/grid-hunt/static/js/runtime-main.c449bc92.js.map",
+    "static/js/2.392d389f.chunk.js": "/grid-hunt/static/js/2.392d389f.chunk.js",
+    "static/js/2.392d389f.chunk.js.map": "/grid-hunt/static/js/2.392d389f.chunk.js.map",
+    "static/js/3.067bec68.chunk.js": "/grid-hunt/static/js/3.067bec68.chunk.js",
+    "static/js/3.067bec68.chunk.js.map": "/grid-hunt/static/js/3.067bec68.chunk.js.map",
+    "index.html": "/grid-hunt/index.html",
+    "static/css/main.c6d4ffbc.chunk.css.map": "/grid-hunt/static/css/main.c6d4ffbc.chunk.css.map",
+    "static/js/2.392d389f.chunk.js.LICENSE.txt": "/grid-hunt/static/js/2.392d389f.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.6eab960e.js",
+    "static/js/runtime-main.c449bc92.js",
     "static/js/2.392d389f.chunk.js",
     "static/css/main.c6d4ffbc.chunk.css",
     "static/js/main.6b8fdf21.chunk.js"
