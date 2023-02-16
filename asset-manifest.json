@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/grid-hunt/static/css/main.c6d4ffbc.chunk.css",
-    "main.js": "/grid-hunt/static/js/main.6b8fdf21.chunk.js",
-    "main.js.map": "/grid-hunt/static/js/main.6b8fdf21.chunk.js.map",
+    "main.js": "/grid-hunt/static/js/main.e3256b1e.chunk.js",
+    "main.js.map": "/grid-hunt/static/js/main.e3256b1e.chunk.js.map",
     "runtime-main.js": "/grid-hunt/static/js/runtime-main.c449bc92.js",
     "runtime-main.js.map": "/grid-hunt/static/js/runtime-main.c449bc92.js.map",
     "static/js/2.392d389f.chunk.js": "/grid-hunt/static/js/2.392d389f.chunk.js",
@@ -17,6 +17,6 @@
     "static/js/runtime-main.c449bc92.js",
     "static/js/2.392d389f.chunk.js",
     "static/css/main.c6d4ffbc.chunk.css",
-    "static/js/main.6b8fdf21.chunk.js"
+    "static/js/main.e3256b1e.chunk.js"
   ]
 }
