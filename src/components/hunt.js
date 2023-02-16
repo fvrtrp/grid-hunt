@@ -8,7 +8,7 @@ export default function Hunt(props) {
 
     const [ userInput, setUserInput] = useState("")
     const [currentQuestion, setQuestion] = useState(null)
-    const [completed, setCompleted] = useState(true)
+    const [completed, setCompleted] = useState(false)
 
     useEffect(() => {
         const nextQuestion = questions.find(i=>i.key === 0)
