@@ -8,7 +8,7 @@ export default function Hunt(props) {
 
     const [ userInput, setUserInput] = useState("")
     const [currentQuestion, setQuestion] = useState(null)
-    const [completed, setCompleted] = useState(false)
+    const [completed, setCompleted] = useState(true)
 
     useEffect(() => {
         const nextQuestion = questions.find(i=>i.key === 0)
@@ -47,12 +47,18 @@ export default function Hunt(props) {
 
     if(completed) {
         return (
-            <div className="container">
-                <h1 className="header">You have<br/>finished.</h1>
-                <div className="winPrompt">
-                    SHARE THIS SCREEN ON SLACK<br/>TO MARK COMPLETION.<br/>CONGRATS!
+            <>
+                <Background />
+                <div className="container">
+                    <h1 className="header">You have<br/>finished.</h1>
+                    <div className="winPrompt">
+                        SHARE THIS SCREEN ON SLACK<br/>TO MARK COMPLETION.<br/>CONGRATS!
+                        <br/>
+                        But...it's not over yet.
+                        Check your dm ;)
+                    </div>
                 </div>
-            </div>
+            </>
         )
     }
 

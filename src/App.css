@@ -14,12 +14,19 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
+.container {
+  height: 100%;
+}
 
 .App .header {
   position: fixed;
   left: 25px;
   top: 25px;
   pointer-events: none;
+  font-size: 70px;
+  color: #20FF3F;
+  font-family: 'Times New Roman';
+  letter-spacing: 0;
 }
 
 .App .prompt {
@@ -34,13 +41,16 @@
 }
 .promptBody {
   letter-spacing: 0;
-  margin: -30px auto 50px;
+  margin: 20px auto 0;
+  font-size: 17px;
+  position: relative;
+  z-index: 2;
   max-width: 70%;
 }
 
 .App input {
   padding: 25px 35px;
-  color: black;
+  color: white;
   background: #FF5151;
   border: solid 0px #0024E1;
   border-radius: 10px;
@@ -60,7 +70,7 @@
 }
 
 .App input::placeholder {
-  color: black;
+  color: white;
 }
 
 .background {
@@ -75,8 +85,7 @@
 .square {
   position: absolute;
   border-radius: 10px;
-  transition: all 0.2s;
-  border: 1px solid black;
+  transition: all 0.3s ease-in-out;
 }
 .square:hover {
   background: #20FF3F;
@@ -84,6 +93,8 @@
 
 .winPrompt {
   line-height: 3;
+  height: 100%;
+  padding-top: 250px;
 }
 
 @media (max-width: 650px) {

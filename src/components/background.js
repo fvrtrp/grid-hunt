@@ -22,8 +22,9 @@ export default function Background() {
         <div className="background">
             {
                 squares.length>0 &&
-                squares.map(i => (
+                squares.map((i, key) => (
                 <div
+                    key={key}
                     className="square"
                     style={{
                         width: `${size}px`,
