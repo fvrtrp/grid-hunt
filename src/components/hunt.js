@@ -48,7 +48,6 @@ export default function Hunt(props) {
     if(completed) {
         return (
             <>
-                <Background />
                 <div className="container">
                     <h1 className="header">You have<br/>finished.</h1>
                     <div className="winPrompt">
@@ -64,7 +63,6 @@ export default function Hunt(props) {
 
     return (
         <>
-            <Background />
             <div className="container">
                 <h1 className="header">
                     <img src={logo} alt="logo" />
