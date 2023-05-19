@@ -52,9 +52,6 @@ export default function Hunt(props) {
                     <h1 className="header">You have<br/>finished.</h1>
                     <div className="winPrompt">
                         SHARE THIS SCREEN ON SLACK<br/>TO MARK COMPLETION.<br/>CONGRATS!
-                        <br/>
-                        But...it's not over yet.
-                        Check your dm ;)
                     </div>
                 </div>
             </>
